@@ -12,12 +12,18 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
     }
 }
 
@@ -35,11 +41,11 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
 
     // Dagger 2 and Compiler
+    compile "com.google.dagger:dagger-compiler:2.0.1"
     compile 'com.google.dagger:dagger:2.0.1'
     apt "com.google.dagger:dagger-compiler:2.0.1"
-
     // Required for @Generated annotation (missing in Java <= 1.6; therefore, Android)
-    compile 'javax.annotation:jsr250-api:1.0'
+    provided 'javax.annotation:jsr250-api:1.0'
 
     //JVM Test
     //JUnit
@@ -59,5 +65,20 @@ dependencies {
     testCompile 'com.google.dagger:dagger:2.0.1'
     testApt "com.google.dagger:dagger-compiler:2.0.1"
     testCompile 'javax.annotation:jsr250-api:1.0'
+
+    //Android Test
+    //Espresso
+    androidTestCompile 'com.android.support.test:runner:0.4'
+    androidTestCompile 'com.android.support.test:rules:0.4'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.1')
+            {
+                exclude group: 'com.google.code.findbugs', module: 'jsr305'
+            }
+    androidTestCompile 'com.android.support:support-annotations:23.1.1'
+    androidTestCompile 'com.android.support.test:runner:0.4.1'
+    androidTestCompile 'com.android.support.test:rules:0.4.1'
+
+    // Mockito
+    androidTestCompile "org.mockito:mockito-core:1.10.19"
 
 }
