@@ -32,7 +32,7 @@ public class MainTest {
 
 	@Test
 	public void testSearch() {
-		String artist = "Queen";
+		String artist = "AC/DC";
 		mainPresenter.showArtistsSearchList(artist);
 		verify(mainScreen).showArtists(artist);
 	}

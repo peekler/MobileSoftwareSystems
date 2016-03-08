@@ -4,9 +4,9 @@ import javax.inject.Singleton;
 
 import dagger.Component;
 import hu.bme.aut.android.spotifydemo.interactor.InteractorModule;
-import hu.bme.aut.android.spotifydemo.network.NetworkModule;
+import hu.bme.aut.android.spotifydemo.mock.MockNetworkModule;
 
 @Singleton
-@Component(modules = {NetworkModule.class, AndroidTestModule.class, InteractorModule.class})
+@Component(modules = {MockNetworkModule.class, AndroidTestModule.class, InteractorModule.class})
 public interface AndroidTestComponent extends SpotifyDemoApplicationComponent {
 }

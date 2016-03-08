@@ -37,7 +37,7 @@ public class ArtistsTest {
 
 	@Test
 	public void testArtists() {
-		query = "Queen";
+		query = "AC/DC";
 		artistsPresenter.refreshArtists(query);
 
 		ArgumentCaptor<List> artistCaptor = ArgumentCaptor.forClass(List.class);
