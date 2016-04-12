@@ -40,9 +40,17 @@ public class ArtistsTest {
 		query = "AC/DC";
 		artistsPresenter.refreshArtists(query);
 
-		ArgumentCaptor<List> artistCaptor = ArgumentCaptor.forClass(List.class);
+		ArgumentCaptor<List> artistCaptor = ArgumentCaptor.forClass(
+				List.class);
 		verify(artistsScreen).showArtists(artistCaptor.capture());
 		assertTrue(artistCaptor.getValue().size() > 0);
+	}
+
+	@Test
+	public void testShowArtistDetails() {
+		artistsPresenter.handleDetails("http://www.google.hu");
+
+		verify(artistsScreen).showArtistsDetails("http://www.google.hu");
 	}
 
 

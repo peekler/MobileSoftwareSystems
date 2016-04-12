@@ -6,6 +6,7 @@ import java.util.List;
 
 import hu.bme.aut.android.spotifydemo.model.Artists;
 import hu.bme.aut.android.spotifydemo.model.ArtistsResult;
+import hu.bme.aut.android.spotifydemo.model.ExternalUrls;
 import hu.bme.aut.android.spotifydemo.model.Image;
 import hu.bme.aut.android.spotifydemo.model.Item;
 import hu.bme.aut.android.spotifydemo.network.ArtistsApi;
@@ -26,6 +27,11 @@ public class MockArtistApi implements ArtistsApi {
 		Item item=new Item();
 		item.setName("AC/DC");
 		item.setPopularity(99);
+
+		ExternalUrls externalUrls = new ExternalUrls();
+		externalUrls.setSpotify("http://www.google.hu");
+		item.setExternalUrls(externalUrls);
+
 
 		List<Image> images=new ArrayList<Image>();
 		Image image=new Image();

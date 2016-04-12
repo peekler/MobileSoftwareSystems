@@ -5,7 +5,6 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 
 import javax.inject.Inject;
 
@@ -58,5 +57,9 @@ public class ArtistsPresenter extends Presenter<ArtistsScreen> {
                 screen.showArtists(event.getArtists());
             }
         }
+    }
+
+    public void handleDetails(String url) {
+        screen.showArtistsDetails(url);
     }
 }

@@ -8,4 +8,6 @@ public interface ArtistsScreen {
     void showArtists(List<Item> artists);
 
     void showNetworkError(String errorMsg);
+
+    void showArtistsDetails(String url);
 }

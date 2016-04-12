@@ -1,8 +1,9 @@
 package hu.bme.aut.android.spotifydemo.ui.artists;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,6 +22,7 @@ import javax.inject.Inject;
 import hu.bme.aut.android.spotifydemo.R;
 import hu.bme.aut.android.spotifydemo.SpotifyDemoApplication;
 import hu.bme.aut.android.spotifydemo.model.Item;
+import hu.bme.aut.android.spotifydemo.ui.details.DetailsActivity;
 import hu.bme.aut.android.spotifydemo.ui.main.MainActivity;
 
 /**
@@ -73,6 +75,16 @@ public class ArtistsFragment extends Fragment implements ArtistsScreen {
         artistsAdapter = new ArtistsAdapter(getContext(), artistsList);
         recyclerViewArtists.setAdapter(artistsAdapter);
 
+        recyclerViewArtists.addOnItemTouchListener(
+                new RecyclerItemClickListener(getContext(), new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override public void onItemClick(View view, int position) {
+                        artistsPresenter.handleDetails(
+                                artistsAdapter.getItem(position).
+                                        getExternalUrls().getSpotify());
+                    }
+                })
+        );
+
         swipeRefreshLayoutArtists = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayoutArtists);
 
         swipeRefreshLayoutArtists.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -115,5 +127,10 @@ public class ArtistsFragment extends Fragment implements ArtistsScreen {
             swipeRefreshLayoutArtists.setRefreshing(false);
         }
         Toast.makeText(getContext(), errorMsg, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void showArtistsDetails(String url) {
+        startActivity(new Intent(getActivity(), DetailsActivity.class));
     }
 }

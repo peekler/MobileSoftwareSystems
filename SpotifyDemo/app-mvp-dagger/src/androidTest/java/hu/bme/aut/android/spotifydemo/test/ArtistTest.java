@@ -41,12 +41,15 @@ public class ArtistTest extends EspressoTest<ArtistsActivity> {
 
 	@Test
 	public void testSearch() {
-		onView(withId(hu.bme.aut.android.spotifydemo.R.id.etArtist)).check(matches(withText(ARTIST)));
+		onView(withId(hu.bme.aut.android.spotifydemo.R.id.etArtist)).check(
+				matches(withText(ARTIST)));
 
 		ElapsedTimeIdlingResource.waitFor(2000, new ElapsedTimeIdlingResource.Listener() {
 			@Override
 			public void inIdle() {
-				onView(allOf(withId(hu.bme.aut.android.spotifydemo.R.id.tvName), withText(ARTIST))).check(matches(isDisplayed()));
+				onView(allOf(withId(
+						hu.bme.aut.android.spotifydemo.R.id.tvName),
+						withText(ARTIST))).check(matches(isDisplayed()));
 			}
 		});
 	}

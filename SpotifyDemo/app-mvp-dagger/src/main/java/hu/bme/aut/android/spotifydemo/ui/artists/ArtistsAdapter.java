@@ -46,6 +46,10 @@ public class ArtistsAdapter extends RecyclerView.Adapter<ArtistsAdapter.ViewHold
         return artistsList.size();
     }
 
+    public Item getItem(int position) {
+        return artistsList.get(position);
+    }
+
     protected static class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView ivImage;
         public TextView tvName;
