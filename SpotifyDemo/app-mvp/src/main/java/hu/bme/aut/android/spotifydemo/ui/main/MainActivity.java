@@ -54,5 +54,4 @@ public class MainActivity extends AppCompatActivity implements MainScreen {
         intent.putExtra(KEY_ARTIST, artistSearchTerm);
         startActivity(intent);
     }
-
 }

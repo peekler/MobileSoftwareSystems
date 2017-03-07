@@ -91,7 +91,8 @@ public class ArtistsFragment extends Fragment {
     }
 
     private void refreshArtists() {
-        Call<ArtistsResult> artistsQuery = artistsApi.getArtists(artist,
+        Call<ArtistsResult> artistsQuery =
+                artistsApi.getArtists(artist,
                 "artist", 0, 3);
         artistsQuery.enqueue(new Callback<ArtistsResult>() {
             @Override

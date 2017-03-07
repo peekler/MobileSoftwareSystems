@@ -23,7 +23,8 @@ import hu.bme.aut.android.spotifydemo.ui.main.MainActivity;
 /**
  * A placeholder fragment containing a simple screen.
  */
-public class ArtistsFragment extends Fragment implements ArtistsScreen {
+public class ArtistsFragment extends Fragment
+        implements ArtistsScreen {
 
     private EditText etArtist;
     private RecyclerView recyclerViewArtists;
@@ -70,7 +71,8 @@ public class ArtistsFragment extends Fragment implements ArtistsScreen {
             @Override
             public void onRefresh() {
                 artist = etArtist.getText().toString();
-                ArtistsPresenter.getInstance().refreshArtists(artist);
+                ArtistsPresenter.getInstance().refreshArtists(
+                        artist);
             }
         });
         return view;

@@ -39,7 +39,8 @@ public class MainTest extends EspressoTest<MainActivity> {
 
 	@Test
 	public void testNavigateToArtistActivity() {
-		onView(withId(R.id.etArtist)).perform(typeText(ARTIST), closeSoftKeyboard());
+		onView(withId(R.id.etArtist)).perform(typeText(ARTIST),
+				closeSoftKeyboard());
 		onView(withId(R.id.btnShowArtists)).perform(click());
 
 		EspressoUtils.matchToolbarTitle(ARTIST_ACTIVITY_TITLE);
