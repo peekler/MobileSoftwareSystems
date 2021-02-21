@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     suspend fun queryGrades(): List<Grade> {
+        //Thread.sleep(5000)
         return AppDatabase.getInstance(this@MainActivity).gradeDao().getAllGrades()
     }
 
