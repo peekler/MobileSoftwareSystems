@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AutoAdapter.iml" filepath="$PROJECT_DIR$/.idea/modules/AutoAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AutoAdapter.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AutoAdapter.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autoadapter-annotations/AutoAdapter.autoadapter-annotations.iml" filepath="$PROJECT_DIR$/.idea/modules/autoadapter-annotations/AutoAdapter.autoadapter-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autoadapter-processor/AutoAdapter.autoadapter-processor.iml" filepath="$PROJECT_DIR$/.idea/modules/autoadapter-processor/AutoAdapter.autoadapter-processor.iml" />
+    </modules>
+  </component>
+</project>

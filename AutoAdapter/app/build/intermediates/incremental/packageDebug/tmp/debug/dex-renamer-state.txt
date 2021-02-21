@@ -1,0 +1,4 @@
+#Sun Feb 21 23:21:30 CET 2021
+base.0=D\:\\Development\\VC\\MobileSoftwareSystems\\05\\AutoAdapter\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

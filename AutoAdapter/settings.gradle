@@ -1,0 +1,2 @@
+rootProject.name='AutoAdapter'
+include ':app', ':autoadapter-annotations', ':autoadapter-processor'

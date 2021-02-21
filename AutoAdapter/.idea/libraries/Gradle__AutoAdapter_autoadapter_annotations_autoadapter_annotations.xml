@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: AutoAdapter.autoadapter-annotations.autoadapter-annotations">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/autoadapter-annotations/build/libs/autoadapter-annotations.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

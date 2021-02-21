@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MVPDemo</string>
+    <string name="btn_calculate">Calculate</string>
+</resources>

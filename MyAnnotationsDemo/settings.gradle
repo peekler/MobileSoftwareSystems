@@ -1,0 +1,4 @@
+include ':autotast-processor'
+include ':autotoast-annotations'
+include ':app'
+rootProject.name = "MyAnnotationsDemo"
