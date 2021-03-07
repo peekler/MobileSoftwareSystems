@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.reflect.Field
+import java.lang.reflect.Method
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,9 +18,9 @@ class MainActivity : AppCompatActivity() {
         var classToUse: Class<*>? = null
         try {
             classToUse = Class.forName("android.app.NotificationManager")
-            val classFields: Array<Field> = classToUse.declaredFields
+            val classMethods: Array<Method> = classToUse.declaredMethods
             tvData.text = ""
-            for (f in classFields) {
+            for (f in classMethods) {
                 tvData!!.append(f.getName().toString() + "\n")
             }
         } catch (e: ClassNotFoundException) {

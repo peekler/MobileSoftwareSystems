@@ -17,6 +17,6 @@ class MainActivity : AppCompatActivity() {
         (application as MainApplication).injector.inject(this)
 
         tvHello.text = info.text
-        tvHello.text = tesla.type
+        //tvHello.text = tesla.type
     }
 }
