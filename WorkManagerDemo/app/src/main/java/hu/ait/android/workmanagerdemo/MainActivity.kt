@@ -20,6 +20,5 @@ class MainActivity : AppCompatActivity() {
                 .build()
         val workRequest = OneTimeWorkRequest.Builder(MyWorker::class.java).setConstraints(constraints).build()
         WorkManager.getInstance().enqueue(workRequest)
-
     }
 }

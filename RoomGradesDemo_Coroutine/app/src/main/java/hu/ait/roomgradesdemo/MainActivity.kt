@@ -54,7 +54,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     suspend fun saveGrade(grade: Grade) {
-        AppDatabase.getInstance(this@MainActivity).gradeDao().insertGrades(grade)
+        AppDatabase.getInstance(this@MainActivity).gradeDao().
+        insertGrades(grade)
     }
 
     suspend fun queryGrades(): List<Grade> {

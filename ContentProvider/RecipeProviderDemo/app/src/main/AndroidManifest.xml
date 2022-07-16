@@ -21,6 +21,7 @@
             android:authorities="hu.aut.android.recipeproviderdemo"
             android:exported="true"
             android:name=".provider.RecipeProvider"/>
+
     </application>
 
 </manifest>

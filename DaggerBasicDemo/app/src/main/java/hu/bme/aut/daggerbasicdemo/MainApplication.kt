@@ -7,6 +7,7 @@ class MainApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        injector = DaggerInfoComponent.builder().vehicleModule(VehicleModule("Tesla")).build()
+        injector = DaggerInfoComponent.builder().vehicleModule(
+            VehicleModule("Tesla")).build()
     }
 }

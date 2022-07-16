@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: AutoAdapter.autoadapter-processor.autoadapter-processor">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/autoadapter-processor/build/libs/autoadapter-processor.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

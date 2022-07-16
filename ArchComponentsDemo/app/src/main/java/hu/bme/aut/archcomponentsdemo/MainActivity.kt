@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         //lifecycle.addObserver(SensorLifeCycleObserver(this))
 
         // 2.
-        /*val acceleroLiveData = AcceleroSensorLiveData(this)
+/*        val acceleroLiveData = AcceleroSensorLiveData(this)
 
         acceleroLiveData.observe(this,
             object: Observer<SensorEvent>{
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         // 3.
 
-        acceleroSensorViewModel.getAcceleroLiveData(this)?.observe(this,
+       acceleroSensorViewModel.getAcceleroLiveData(this)?.observe(this,
                 object: Observer<SensorEvent>{
                     override fun onChanged(t: SensorEvent?) {
                         tvData.text = "X: ${t!!.values[0]} Y: ${t!!.values[1]} Z: ${t!!.values[2]}"
@@ -38,4 +38,7 @@ class MainActivity : AppCompatActivity() {
                 }
         )
     }
+
+
+
 }

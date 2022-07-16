@@ -8,7 +8,8 @@ import android.hardware.SensorManager
 import android.widget.Toast
 import androidx.lifecycle.LiveData
 
-class AcceleroSensorLiveData(private val context: Context) : LiveData<SensorEvent>(),
+class AcceleroSensorLiveData(private val context: Context) :
+    LiveData<SensorEvent>(),
     SensorEventListener {
 
     private val sensorManager: SensorManager

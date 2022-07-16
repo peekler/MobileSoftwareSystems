@@ -33,11 +33,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tvHello.text = vehicle.type
+        //tvHello.text = vehicle.type
         tvHello.text = analyitics.doTest()
 
         demoToaster.doToast()
 
-        logger.doLogging()
+        //logger.doLogging()
     }
 }
